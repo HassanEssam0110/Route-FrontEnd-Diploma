@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data User</title>
+    <style>
+        h5 {
+            display: inline;
+            color: #F99417;
+        }
+
+        span {
+            color: #F5F5F5;
+        }
+    </style>
+</head>
+
+<body style=" background-color: #F5F5F5 ;font-family: sans-serif;">
+
+    <h2
+        style=" width: 90%; margin: auto;background-color: #363062; color: #F99417;border-bottom: 1px solid #F5F5F5; text-align: center; padding: 20px;">
+        Welcome</h2>
+    <div id="userData" style="width: 90%; margin: auto;padding: 20px; background-color: #4D4C7D;">
+    </div>
+    <script>
+        const userObj = JSON.parse(localStorage.getItem('userObj'));
+        const userDiv = document.getElementById('userData');
+        userDiv.innerHTML = `
+        <h5> fName:</h5>
+        <span>${userObj.fName}</span><br><br>
+        <h5> lName:</h5>
+        <span>${userObj.lName}</span><br><br>
+        <h5> phone:</h5>
+        <span>${userObj.phone}</span><br><br>
+        <h5> email:</h5>
+        <span>${userObj.email}</span><br><br>
+        <h5> gender:</h5>
+        <span>${userObj.gender}</span><br><br>
+        <h5> states:</h5>
+        <span>${userObj.states}</span><br><br>
+        <h5> userSelect:</h5>
+        <span>${userObj.userSelect}</span><br><br>
+        `  </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML|Assignment-02</title>
+</head>
+
+<body style="color: #F5F5F5; background-color: #F5F5F5 ;font-family: sans-serif;">
+    <form style="width: 98%; margin: auto;">
+        <fieldset style="background-color:#4D4C7D ;">
+            <legend style=" color: #363062;background-color: #F99417;">
+                <h1>Personal Data</h1>
+            </legend>
+            <br> <br> <br>
+            <fieldset style="background-color:#363062 ; ">
+                <legend style="color: #363062;background-color: #F99417;">
+                    <br>
+                    <h3>YourName</h3> <br>
+                </legend>
+                <br> <br>
+                <label for="fName" style="display: inline-block; width:90px ; ">first name </label>
+                : <input id="fName" type="text" name="fName" required>
+                <br>
+                <label for="lName" style="display: inline-block; width:90px ; ">last name</label>
+                : <input id="lName" type="text" name="lName" required>
+            </fieldset>
+            <br> <br>
+            <div>
+                <label for="phone" style="display: inline-block; width:90px ; ">your
+                    phone</label>
+                : <input id="phone" type="tel" name="phone" required>
+                <br>
+                <label for=" email" style="display: inline-block; width:90px ; ">Email</label>
+                : <input id="email" type="email" name="email" required>
+                <br>
+                <label for="password" style="display: inline-block; width:90px ; ">password</label>
+                : <input id="password" type="password" name="password" required>
+                <br>
+                <label for="rePassword" style="display: inline-block; width:90px ; ">re-password</label>
+                : <input id="rePassword" type="password" name="rePassword" required>
+                <br>
+            </div>
+            <br> <br>
+            <br> <br>
+
+            <div>
+                <input id="genMale" type="radio" name="gender" value="Male" checked>
+                <label for="genMale">Male</label>
+                <br>
+                <input id="genFemale" type="radio" name="gender" value="Female">
+                <label for="genFemale">Female</label>
+            </div>
+            <br>
+            <div>
+                <input id="student" type="checkbox" name="status" value="Student" checked>
+                <label for="student">Student</label>
+                <br>
+                <input id="graduated" type="checkbox" name="status" value="Graduated">
+                <label for="graduated">Graduated</label>
+            </div>
+            <br> <br>
+            <select name="userSelect" id="userSelect">
+                <optgroup label="Group 1">
+                    <option value="value1">Option 1.1</option>
+                </optgroup>
+                <optgroup label="Group 2">
+                    <option value="value2" selected>Option 2.1</option>
+                    <option value="value3">Option 2.2</option>
+                </optgroup>
+                <optgroup label="Group 3" disabled>
+                    <option value="value4">Option 3.1</option>
+                    <option value="value5">Option 3.2</option>
+                    <option value="value6">Option 3.3</option>
+                </optgroup>
+            </select>
+            <br>
+            <button id="btnSubmit" type="submit"
+                style="border:none; background-color: #F99417; color: #363062; cursor: pointer;">SUBMIT</button>
+            <br> <br> <br> <br> <br>
+        </fieldset>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
