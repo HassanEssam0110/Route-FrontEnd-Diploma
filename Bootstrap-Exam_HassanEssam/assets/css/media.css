@@ -1,0 +1,48 @@
+@media screen and (max-width: 412px) {
+  .works .modal-content {
+    margin-top: 25%;
+  }
+}
+@media screen and (max-width: 576px) {
+  :root {
+    --letter-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  :root {
+    --letter-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav.navbar {
+    & .container {
+      max-width: 100%;
+    }
+    & .nav-link {
+      width: fit-content;
+      margin: 15px auto;
+    }
+
+    & .nav-link,
+    .nav-link.active,
+    .nav-link:hover {
+      color: var(--dark-color-main);
+    }
+
+    & .nav-link:after {
+      background-color: var(--dark-color-main);
+    }
+
+    & .navbar-nav {
+      border-top: 1px solid rgba(12, 12, 12, 0.04);
+      margin-top: 0.625rem;
+      background-color: var(--color-Secondary);
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  :root {
+    --letter-size: 1.85rem;
+  }
+}
