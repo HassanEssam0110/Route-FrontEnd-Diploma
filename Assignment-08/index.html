@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- *============================= Meta ============================= -->
+    <meta name="description" content="Assiment-8 JS">
+    <meta name="keywords" content="JS,JSON,Bootstrap 5,Assiment-8">
+    <meta name="author" content="Hassan Essam">
+    <!-- *============================= CSS FILES ============================= -->
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Main style Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Assignment-08 JS</title>
+</head>
+
+<body>
+    <main>
+        <section id="quoteSection" class="min-vh-100 bg-section">
+            <div class="container  py-4">
+                <h1 class="text-center display-3 text-light ">Quote of the Day</h1>
+                <p class="text-center text-primary fw-lighter display-6 ">Press the button below to recieve a random
+                    quote!</p>
+                <article class="row justify-content-center align-items-center mt-2">
+                    <div class="col col-lg-10 col-xl-8">
+                        <button id="quote_btn" class="btn btn-outline-primary d-block mx-auto my-3 text-uppercase">new
+                            quote</button>
+                        <div
+                            class="inner d-flex flex-column justify-content-around align-items-center   py-4 px-2 mb-3 rounded">
+                            <figure class="mb-0">
+                                <img id="avater" class="quote-avater" src="assets/img/avater-default.png"
+                                    alt="author avater personal image" data-bs-toggle="modal"
+                                    data-bs-target="#quoteModal">
+                            </figure>
+                            <div class=" text-center mt-3 quote-content ">
+                                <p id="quote" class="quote-text mb-0 fs-5 fw-semibold text-light ">Lorem ipsum dolor
+                                    sit amet.</p>
+                                <p id="author" class="quote-author mb-0 fst-italic text-warning ">Lorem, ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Modal -->
+                <div class="modal fade " id="quoteModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper">
+                                    <div id="swiperWrapper" class="swiper-wrapper">
+                                        <!-- <div class="swiper-slide">Slide 1</div> -->
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- *============================= JS FILES ============================= -->
+    <!-- BootStrap JS -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

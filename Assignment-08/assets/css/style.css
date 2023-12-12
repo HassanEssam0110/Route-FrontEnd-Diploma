@@ -1,0 +1,53 @@
+.bg-section {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 90%), rgba(0, 0, 0, 95%)),
+    url("../img/bg.jpg");
+}
+
+.quote-avater {
+  width: 250px;
+  height: 250px;
+  border-radius: 0 20px 0 20px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  cursor: pointer;
+}
+.quote-content {
+  min-height: 90px;
+}
+
+@media screen and (max-width: 600px) {
+  .quote-content {
+    min-height: auto;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  width: 200px;
+  height: 250px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
