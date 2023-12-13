@@ -7,6 +7,6 @@ Main Topics:
 - Font Awesome
 - icomoon
 - heroicon
-- JS
+- JavaScript
 - Swiper js
 - ScrollReveal js
