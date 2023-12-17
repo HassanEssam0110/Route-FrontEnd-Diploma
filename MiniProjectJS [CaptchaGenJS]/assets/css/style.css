@@ -1,0 +1,115 @@
+:root {
+  --color-main: #e45826;
+  --color-secondary: #fff;
+}
+::selection {
+  background-color: var(--color-main);
+
+  color: var(--color-secondary);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.section-captcha {
+  /* background-color: #19172e; */
+  background-color: rgba(228, 89, 38, 0.176);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(228, 89, 38, 0.8),
+      rgba(228, 89, 38, 0.8)
+    ),
+    url("../img/1.jpg");
+}
+.text-main {
+  color: var(--color-main);
+}
+.w-90 {
+  width: 90%;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 700;
+  color: var(--color-main);
+  background-color: rgba(228, 89, 38, 0.176);
+}
+
+.capatch-box {
+  height: 60px;
+  max-height: 60px;
+  background-image: url("../img/1.jpg");
+  object-fit: cover;
+  letter-spacing: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-main {
+  --bs-btn-color: var(--color-secondary);
+  --bs-btn-bg: var(--color-main);
+  --bs-btn-border-color: var(--color-main);
+  --bs-btn-hover-color: var(--color-main);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--color-main);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--color-secondary);
+  --bs-btn-active-bg: var(--color-main);
+  --bs-btn-active-border-color: var(--color-main);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--color-secondary);
+  --bs-btn-disabled-bg: var(--color-main);
+  --bs-btn-disabled-border-color: var(--color-main);
+  transition: 0.3s;
+}
+
+.btn-main:active {
+  transform: scale(0.97);
+}
+
+form .btn-main {
+  position: absolute;
+  font-size: 14px;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+form input.capatch-input {
+  padding-block: 12px;
+}
+form input.capatch-input:focus {
+  box-shadow: none;
+}
+form .invalid-feedback {
+  position: absolute;
+  left: 5px;
+  /* bottom: -25px; */
+  top: 105%;
+}
+.border-main {
+  border: 1px solid #e45826;
+}
+
+@media screen and (min-width: 451px) and (max-width: 991px) {
+  .title {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .w-75 {
+    width: 100% !important;
+  }
+  .title {
+    font-size: 1.02rem;
+  }
+  .capatch-box {
+    letter-spacing: 0.5rem;
+  }
+  form input.capatch-input {
+    font-size: 0.9375rem;
+  }
+}

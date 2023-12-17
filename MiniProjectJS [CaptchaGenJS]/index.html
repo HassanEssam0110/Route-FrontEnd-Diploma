@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ^=============== SEO Meta Tags =============== -->
+    <meta name="description" content="Enter a brief and relevant description of the CAPTCHA Generator project.">
+    <meta name="keywords" content="CAPTCHA, Generator, JavaScript, web development, security">
+    <meta name="author" content="Hassan Essam">
+    <!-- ^=============== GOOGLE FONTS =============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- ^=============== CSS Files =============== -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="./assets/css/icomoon.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>CAPTCHA Generator | project Js</title>
+</head>
+
+<body>
+    <main>
+        <section class="section-captcha min-vh-100 d-flex justify-content-center align-items-center">
+            <div class="container">
+                <div class="row w-100 mx-auto d-flex justify-content-center align-items-center">
+                    <div class="col-md-8">
+                        <div
+                            class="inner bg-white rounded py-5 px-3 d-flex flex-column justify-content-around align-items-center gap-3">
+                            <h2 class="title text-uppercase text-center w-75 py-4  mb-4 rounded shadow ">
+                                CAPTCHA Generator</h2>
+                            <div class="d-flex justify-content-between gap-2 w-75">
+                                <span id="capatchText"
+                                    class="capatch-box  fs-4 w-90 rounded user-select-none text-muted border"></span>
+                                <button id="btnGenerator" type="button" class="btn btn-main">
+                                    <i class="icon-spinner11  icon-captcha"></i></button>
+                            </div>
+                            <form id="formCaptcha" class="w-75 mx-auto position-relative">
+                                <input id="capatchInput" type="text" class="capatch-input form-control border-main"
+                                    maxlength="6" placeholder="Enter Captcha">
+                                <button id="check" type="button" class="btn btn-main">Check</button>
+                                <div class="invalid-feedback">
+                                    Please Enter captcha correct. </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ^=============== JS Files =============== -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
