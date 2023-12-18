@@ -1,0 +1,236 @@
+:root {
+  --color-main: #120f1b;
+  --color-second: #6225e6;
+  --color-light: #fff;
+
+  --hight-cards: 200px;
+}
+
+body {
+  font-family: "Fredoka One", cursive;
+  background-color: #f1f1f1;
+  background-image: url("../img/bg-01.jpg");
+  color: var(--color-main);
+}
+
+main {
+  background-color: var(--color-light);
+}
+
+.w-custom {
+  width: 25%;
+}
+
+.text-color-second {
+  color: var(--color-second);
+}
+.text-bg-second {
+  background-color: var(--color-second);
+  color: var(--color-light);
+}
+.bg-main {
+  background-color: var(--color-main);
+  color: var(--color-light);
+}
+
+.img-background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-title {
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  font-size: 60px;
+  letter-spacing: 5px;
+}
+.header-title span {
+  display: inline-block;
+  animation: jump-chars 1.5s linear infinite;
+}
+.header-title span:not(.jump) {
+  animation: jump-chars-2 1.5s linear infinite;
+}
+
+@keyframes jump-chars {
+  0% {
+    transform: translateY(0) scale(0.89);
+  }
+  50% {
+    transform: translateY(-5px) scale(1);
+  }
+  100% {
+    transform: translateY(0) scale(0.9);
+  }
+}
+@keyframes jump-chars-2 {
+  0% {
+    transform: translateY(-5px) scale(1);
+  }
+  50% {
+    transform: translateY(0) scale(0.89);
+  }
+  100% {
+    transform: translateY(-5px) scale(1);
+  }
+}
+
+.header-subtitle {
+  font-size: 20px;
+  min-height: 18px;
+}
+
+.winning-color {
+  background-color: rgba(98, 37, 230, 0.1);
+  width: fit-content;
+}
+
+.square {
+  height: var(--hight-cards);
+  cursor: pointer;
+}
+
+/************** skeleton loading ****************/
+.skeleton {
+  background-image: linear-gradient(
+    90deg,
+    rgba(98, 37, 230, 0.2),
+    var(--color-light),
+    rgba(98, 37, 230, 0.2)
+  );
+  overflow: hidden;
+  height: var(--hight-cards);
+  cursor: default;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: loading-skeleton 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-skeleton {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+/************** btn levels ****************/
+.btn-level {
+  width: 25%;
+}
+.btn-main {
+  --bs-btn-color: var(--color-second);
+  --bs-btn-border-color: var(--color-second);
+  --bs-btn-hover-color: var(--color-light);
+  --bs-btn-hover-bg: var(--color-second);
+  --bs-btn-hover-border-color: var(--color-second);
+  --bs-btn-focus-shadow-rgb: 25, 135, 84;
+  --bs-btn-active-color: var(--color-light);
+  --bs-btn-active-bg: var(--color-second);
+  --bs-btn-active-border-color: var(--color-second);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--color-second);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--color-second);
+  --bs-gradient: none;
+}
+
+/************** btn play ****************/
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: flex;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  background: var(--color-second);
+  color: var(--color-light);
+  transition: 1s;
+  box-shadow: 5px 5px 0 #222;
+  transform: skewX(-15deg);
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 5px 5px 0 #fbc638;
+}
+
+.cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 10px;
+}
+
+.cta span {
+  transform: skewX(15deg);
+}
+
+.cta span:nth-child(2) {
+  position: relative;
+  top: 40%;
+  width: 20px;
+  margin-left: 10px;
+  transform: translateY(-50%);
+}
+
+/************** SVG btn play ****************/
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: var(--color-light);
+  }
+  50% {
+    fill: #fbc638;
+  }
+  100% {
+    fill: var(--color-light);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-title {
+    font-size: 45px;
+  }
+  .w-custom,
+  .btn-level {
+    width: 100%;
+  }
+}

@@ -4,7 +4,6 @@
 }
 ::selection {
   background-color: var(--color-main);
-
   color: var(--color-secondary);
 }
 
@@ -13,14 +12,7 @@ body {
 }
 
 .section-captcha {
-  /* background-color: #19172e; */
-  background-color: rgba(228, 89, 38, 0.176);
-  background-image: linear-gradient(
-      to bottom,
-      rgba(228, 89, 38, 0.8),
-      rgba(228, 89, 38, 0.8)
-    ),
-    url("../img/1.jpg");
+  background-color: #19172e;
 }
 .text-main {
   color: var(--color-main);
@@ -66,10 +58,6 @@ body {
   transition: 0.3s;
 }
 
-.btn-main:active {
-  transform: scale(0.97);
-}
-
 form .btn-main {
   position: absolute;
   font-size: 14px;
@@ -93,12 +81,6 @@ form .invalid-feedback {
   border: 1px solid #e45826;
 }
 
-@media screen and (min-width: 451px) and (max-width: 991px) {
-  .title {
-    font-size: 1.25rem;
-  }
-}
-
 @media screen and (max-width: 450px) {
   .w-75 {
     width: 100% !important;
@@ -111,5 +93,11 @@ form .invalid-feedback {
   }
   form input.capatch-input {
     font-size: 0.9375rem;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 991px) {
+  .title {
+    font-size: 1.25rem;
   }
 }

@@ -28,20 +28,21 @@ function generatCaptca(arr, num) {
 
 // *================= JS Functions =================
 generatCaptca(chars, 6);
-alertify.set('notifier', 'position', 'top-center');
+alertify.set('notifier', 'position');
 
 function checkCaptca(captca, capatchInput) {
     const validFeedback = document.querySelector(".invalid-feedback");
     if (!capatchInput.value) {
         validFeedback.style.display = 'block'
         validFeedback.textContent = "Please enter captca"
-        alertify.warning('Please enter captcha');
+        alertify.warning('Please enter the captcha.');
+
     } else if (capatchInput.value === captca) {
-        alertify.notify('Valid Captca', 'success', 5);
+        alertify.notify('Congratulations! Captcha is correct. 🎉', 'success', 5);
         validFeedback.style.display = 'none';
+
     } else {
-        // capatchInput.classList.add('is-invalid');
-        alertify.notify('Invalid captcha, Please try again', 'error', 5);
+        alertify.notify('Invalid captcha. Please try again.', 'error', 5);
         validFeedback.style.display = 'block';
         validFeedback.textContent = "Invalid, Enter captcha correct."
     }
