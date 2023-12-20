@@ -8,5 +8,7 @@ Main Topics:
 - icomoon
 - heroicon
 - JavaScript
-- Swiper js
-- ScrollReveal js
+- Swiper-js
+- ScrollReveal-js
+- Alertify-js
+- SweetAlert2
