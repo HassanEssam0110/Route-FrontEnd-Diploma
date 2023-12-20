@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- *============= Favicon ============= -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/bookmark.ico">
+    <!-- *============= Meta ============= -->
+    <meta name="description"
+        content="Explore Bookmarker, a webpage to effortlessly manage your favorite sites. Discover JavaScript-powered features with Bootstrap 5 for easy bookmarking. Created by Hassan Essam.">
+    <meta name="keywords" content="Bookmarker,JavaScript,Bootstrap 5,Assiment-9">
+    <meta name="author" content="Hassan Essam">
+    <!-- *============= Google Fonts ============= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- *============= CSS FILES ============= -->
+    <!-- Icomoon library -->
+    <link rel="stylesheet" href="./assets/css/icomoon.css">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Main style Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Bookmarker</title>
+</head>
+
+<body class="py-3 min-vh-100">
+    <svg class="svg svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447 55"  >
+        <g id="Artboard" fill="none" fill-rule="evenodd">
+            <path class="shape"
+                d="M446 56l1-1v1h-1zm-29 0c-5-4-5-4-5-2l-3-2-4-3c-2-2-2-2-1 0l8 7h-2l-3-1-4-2c-2-2-6-3-6-2l1 1 1 1-4-2-5-3c-3-1-16-1-33 2l-15 1 3-1 2-1 14-4c4 0 5-1 3-2h1c4 1 13 0 14-1l5-1c3 0 4 0 3 1l1 1 2-1h1l2 1 3-1h5l3 1 4 3c8 3 16 9 14 9l-1 1h-4zM0 56l7-3 6-2c3-2 4-2 9-2 8 0 13-2 36-11a265 265 0 0 1 27-11 80 80 0 0 1 27-14l11-4a565 565 0 0 0 9 0c-11 3-26 9-24 11l12-3 5-1v2a412 412 0 0 1-7 3c-1 2 5 1 11-2 8-5 8-5 15 1l8 5 5 3 4 3 9-2-4-2-7-6-3-2 4 2c5 4 12 8 15 8l6 2 12 3c11 2 17 4 23 8a85 85 0 0 0 29 14H0zm444-1l-4-2c-2-2-6-3-9-4l-4-1c1-1 8 1 11 3l3 1h1l1 1c2 1 2 2 1 2zm-24-8c-2 0-1-1 2-1l2 1h-4zm-5 0l-1-1h3c1 1 0 1-2 1zm-25 7h-2c-1-1-2-1-1-2l2-1c2 1 2 1 0 1l-2 1h2l1 1zm-8-20v-2c1-1 2 0 1 1l-1 1zm2 16c2 1 2 2-1 2l-2-2h3zm-4 1h-1-1 2zm-50 0c-2-1-1-1 2-1h1l-3 1zm-4 0h-1 1zm-5 1h-2 2zm-8-3h0zm-10 1h-1 1zm6 4zm-26-1h-2 2zm-14 0l-12-2c-16-2-31-9-45-19a217 217 0 0 0-16-11c0-1 9 3 13 6a319 319 0 0 0 15 10c10 6 18 8 36 11a112 112 0 0 1 13 2 1560 1560 0 0 0 21 1l-25 2zM172 9l-4-4-4-3c-1 0-2 0-1-1 2 0 3 0 7 4l2 4zm-14-7h0zm-6 15c-2 0-2 0 0 0h0zm-3 1v-1h1l-1 1zM58 33l-11 2c-4 0 0-2 7-3 6-1 7-1 4 1zm-19 2l2-1c3 0 3 0 0 1h-2zm-10-1c0-1 7-2 9-1l-4 1h-5zm0 7l-4 2 4-3c5-2 5-1 0 1z" />
+            </g>
+    </svg>
+    <main>
+        <header>
+            <!-- ^============= start nav ============= -->
+            <nav>
+                <div class="container bg-transparent d-flex justify-content-end">
+                    <button id="btnMode" class="btn btn-mode ms-3"><i class="icon-moon-o"></i></button>
+                </div>
+            </nav>
+            <!-- ^============= start bookmark Inputs ============= -->
+            <div class="container mt-1 ">
+                <h1 class="title mx-auto position-relative w-fit-content">Bookmarker</h1>
+                <div
+                    class="bookmark-body shadow needs-validation overflow-hidden d-flex flex-column justify-content-center align-items-center gap-4 px-4 py-5 mt-5 ">
+                    <h2 class="sub-title fw-bolder mb-2 ">
+                        <i class="icon-bookmark align-middle"></i>
+                        your favorite sites
+                        <i class="icon-bookmark align-middle"></i>
+                    </h2>
+                    <div class="site-name w-100 d-flex flex-column justify-content-center ">
+                        <label for="bookmarkName" class="pb-2 fs-6  fw-semibold">
+                            <i class="icon-book-reference pe-2"></i>
+                            Site Name</label>
+                        <input id="bookmarkName" type="text" placeholder="Bookmark Name" class="form-control"
+                            required />
+                    </div>
+                    <div class="site-url w-100 d-flex flex-column justify-content-center">
+                        <label for="bookmarkURL" class="pb-2  fs-6 fw-semibold">
+                            <i class="icon-link pe-2"></i>Site URL</label>
+                        <input id="bookmarkURL" type="url" placeholder="Website URL" class="form-control" required />
+                    </div>
+                    <button id="submitBtn" type="submit"
+                        class="btn btn-submit text-capitalize fw-semibold px-5">Submit</button>
+                </div>
+            </div>
+        </header>
+        <section id="tableSection" class="mt-4 py-4">
+            <div class="container">
+                <input id="searchInput" class="form-control w-100 mb-3" type="search" placeholder="Search"
+                    aria-label="Search">
+                <div class="table-responsive">
+                    <table class="table text-center ">
+                        <thead class="table- table-active">
+                            <tr>
+                                <th scope="col" class="py-2 ">Index</th>
+                                <th scope="col" class="py-2 ">Website</th>
+                                <th scope="col" class="py-2 ">Visit</th>
+                                <th scope="col" class="py-2 ">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableContent"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- *============= JS FILES ============= -->
+    <!-- Sweetalert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- BootStrap JS -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
