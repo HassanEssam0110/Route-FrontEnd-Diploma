@@ -4,6 +4,7 @@ const easyBtn = document.querySelector('#easyBtn');
 const hardBtn = document.querySelector('#hardBtn');
 const colorsContainer = document.querySelector('#colorsContainer');
 const winningColor = document.querySelector('#winningColor');
+const scoreEl = document.querySelector('.user-score');
 
 // ^=============== APP VARIABLES ===============
 const typedObj = {
@@ -35,15 +36,11 @@ const levels = {
         numOfCards: 6,
     }
 };
-let selectedLevel = 'easy', correctAnswer = '';
+let selectedLevel = 'easy', correctAnswer = '', score = 0;
 
 // ^=============== JS FUNCTIONS HELPERS ===============
 function toggleClass(el, className, condtion) {
-    if (condtion) {
-        el.classList.add(className)
-    } else {
-        el.classList.remove(className)
-    }
+    condtion ? el.classList.add(className) : el.classList.remove(className);
 }
 
 function randomNum(num) {
@@ -58,6 +55,19 @@ function generatColor() {
     return color;
 }
 
+
+// ^=============== JS FUNCTIONS ===============
+// check score in local storage
+(function () {
+    let s = Number(localStorage.getItem('score'));
+    if (s) { score = s; }
+    scoreEl.innerHTML = score;
+})();
+
+// *=========== typed-Js ===========
+var typed = new Typed('#typed', typedObj);
+
+// Create a new colors and correct color.
 function askQuestion(numCards) {
     let colors = [];
     for (let i = 0; i < numCards; i++) { colors.push(generatColor()) }
@@ -65,57 +75,45 @@ function askQuestion(numCards) {
     winningColor.innerHTML = correctAnswer;
     displayCards(colors);
 }
-
+// Render the cards with new colors.
 function displayCards(colorsArray) {
-    let lenght = colorsArray.length;
+    let length = colorsArray.length;
     colorsContainer.innerHTML = '';
-    for (let i = 0; i < lenght; i++) {
+    for (let i = 0; i < length; i++) {
         colorsContainer.innerHTML += `<div class="col-4"><div class="square rounded" style="background-color: ${colorsArray[i]};"></div></div>`
     }
 }
-
-// ^=============== JS FUNCTIONS ===============
-// *=========== typed-Js ===========
-var typed = new Typed('#typed', typedObj);
-
-function start(numberQuestion) {
-    askQuestion(numberQuestion);
-    let cardsEl = document.querySelectorAll('.square');
-    if (cardsEl) {
-        cardsEl.forEach(card => card.addEventListener('click', (e) => {
-            chekAnswer(e);
-        }));
-    }
-}
-
+// Check if answer is Correct or Not.
 function chekAnswer(e) {
     clickColor = e.target.style.backgroundColor;
     if (clickColor.trim() === correctAnswer.trim()) {
+        score++;
+        scoreEl.innerHTML = score;
+        localStorage.setItem('score', score);
         // *=========== sweetalert2-JS ===========
         Swal.fire(sweetAlertObj)
             .then((result) => {
-                if (result.isConfirmed) {
-                    start(levels[selectedLevel].numOfCards);
-                }
+                if (result.isConfirmed) { start(levels[selectedLevel].numOfCards); }
             });
     } else {
         e.target.style.opacity = '0';
     }
 }
-
+// Start Game.
+function start(numberQuestion) {
+    askQuestion(numberQuestion);
+    let cardsEl = Array.from(document.querySelectorAll('.square'));
+    if (cardsEl) {
+        cardsEl.forEach(card => card.addEventListener('click', (e) => { chekAnswer(e); }));
+    }
+}
 // ^=============== EVENTS ===============
-playBtn.addEventListener('click', () => {
-    start(levels[selectedLevel].numOfCards);
-});
+const setLevel = (btn, level) => {
+    toggleClass(btn, 'active', true);
+    toggleClass(btn === easyBtn ? hardBtn : easyBtn, 'active', false);
+    selectedLevel = level;
+};
 
-easyBtn.addEventListener('click', () => {
-    toggleClass(easyBtn, 'active', true);
-    toggleClass(hardBtn, 'active', false);
-    selectedLevel = levels.easy.name;
-});
-
-hardBtn.addEventListener('click', () => {
-    toggleClass(hardBtn, 'active', true);
-    toggleClass(easyBtn, 'active', false);
-    selectedLevel = levels.hard.name;
-});
+easyBtn.addEventListener('click', () => setLevel(easyBtn, levels.easy.name));
+hardBtn.addEventListener('click', () => setLevel(hardBtn, levels.hard.name));
+playBtn.addEventListener('click', () => start(levels[selectedLevel].numOfCards));
