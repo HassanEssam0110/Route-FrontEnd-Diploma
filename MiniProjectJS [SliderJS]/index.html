@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- *============= CSS FILES ============= -->
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Main style Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Slideshow Gallery-JS</title>
+</head>
+
+<body id="body" class="background min-vh-100 py-2 ">
+    <div class="border-body"></div>
+    <div id="lightBox" class="light-box w-100 p-3 d-none justify-content-center align-items-center">
+        <div class="d-flex justify-content-between align-items-center position-relative">
+            <button id="lightBoxPrev"
+                class="btn-lightBox  btn-lightBox-prev d-flex justify-content-center align-items-center position-absolute  translate-middle-y z-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" data-slot="icon" class="" width="30" height="30">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+                </svg>
+            </button>
+            <img id="lightBoxImage" src="" class="p-3 " alt="">
+            <button id="lightBoxNext"
+                class="btn-lightBox btn-lightBox-next d-flex justify-content-center align-items-center  position-absolute  translate-middle-y z-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" data-slot="icon" width="30" height="30">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+        <button id="btnClose" class="btn btn-lightBox-close position-absolute z-3">Close</button>
+    </div>
+    <div class="container pt-2 pt-md-5 bg-radial">
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-6 mt-3 mt-md-0">
+                <div class="slider-gallery mx-auto shadow">
+                    <img id="showImage" class="slider-main-image pb-1 d-block " alt="">
+                    <div class="d-flex  position-relative">
+                        <button id="prev"
+                            class="d-flex justify-content-center align-items-center position-absolute top-50 start-0 translate-middle-y  z-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" data-slot="icon" class="" width="24" height="24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+                            </svg>
+                        </button>
+                        <button id="next"
+                            class=" d-flex justify-content-center align-items-center  position-absolute top-50 end-0 translate-middle-y z-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                        <img src="./assets/img/work-1.jpg" class="slider-img w-25 active" alt="work-1">
+                        <img src="./assets/img/work-2.jpg" class="slider-img w-25" alt="work-2">
+                        <img src="./assets/img/work-3.jpg" class="slider-img w-25" alt="work-3">
+                        <img src="./assets/img/work-4.jpg" class="slider-img w-25" alt="work-4">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="">Welcome to our Website</h2>
+                <p class="fs-5">Discover a world of possibilities with our innovative solutions and dedicated team.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non neque elit. Sed ut imperdiet felis.
+                    Vivamus sed felis eu odio volutpat</p>
+            </div>
+        </div>
+        <div class="my-5 px-2 fs-5 text-center">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed numquam consequatur, facere a ducimus
+                tenetur dolor eos doloremque ad minus molestiae voluptatum nulla distinctio? Laudantium libero vel
+                dignissimos nemo soluta.</p>
+        </div>
+    </div>
+    <div class="background py-5">
+        <div class="container my-4 ">
+            <div class="row g-2">
+                <div class="col-6  col-md-4  rounded-4">
+                    <img src="./assets/img/team-01.jpg" class="item-image w-100 border p-2 rounded-4" alt="work-4">
+                </div>
+                <div class="col-6  col-md-4  rounded-4">
+                    <img src="./assets/img/team-02.jpg" class="item-image w-100 border p-2 rounded-4" alt="work-4">
+                </div>
+                <div class="col-6  col-md-4  rounded-4">
+                    <img src="./assets/img/team-03.jpg" class="item-image w-100 border p-2 rounded-4" alt="work-4">
+                </div>
+                <div class="col-6  col-md-4  rounded-4">
+                    <img src="./assets/img/team-04.jpg" class="item-image w-100 border p-2 rounded-4" alt="work-4">
+                </div>
+                <div class="col-6  col-md-4  rounded-4">
+                    <img src="./assets/img/team-05.png" class="item-image w-100 border p-2 rounded-4" alt="work-4">
+                </div>
+                <div class="col-6  col-md-4  rounded-4">
+                    <img src="./assets/img/team-06.png" class="item-image w-100 border p-2 rounded-4" alt="work-4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background py-5">
+        <div class="container my-4 px-3">
+            <div class=" carousel-container w-100  position-relative">
+                <button id="carouselPrev"
+                    class="btn-carousel btn-carousel-prev d-flex justify-content-center align-items-center position-absolute  translate-middle-y z-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" data-slot="icon" class="" width="30" height="30">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+                    </svg>
+                </button>
+
+                <button id="carouselNext"
+                    class="btn-carousel btn-carousel-next d-flex justify-content-center align-items-center  position-absolute  translate-middle-y z-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" data-slot="icon" width="30" height="30">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+                <div class="h-500 overflow-hidden border rounded-4 position-relative ">
+                    <div class="carousel-box h-500 active">
+                        <img src="./assets/img/cat-01.jpg" class=" d-block w-100 rounded-4" alt="work-4">
+                    </div>
+                    <div class="carousel-box h-500">
+                        <img src="./assets/img/cat-02.jpg" class="d-block w-100  rounded-4" alt="work-4">
+                    </div>
+                    <div class="carousel-box h-500">
+                        <img src="./assets/img/cat-03.jpg" class="d-block w-100  rounded-4" alt="work-4">
+                    </div>
+                    <div class="carousel-box h-500">
+                        <img src="./assets/img/cat-04.jpg" class="d-block w-100  rounded-4 " alt="work-4">
+                    </div>
+                    <div class="carousel-box h-500">
+                        <img src="./assets/img/cat-05.jpg" class="d-block w-100  rounded-4 " alt="work-4">
+                    </div>
+                    <div class="carousel-box h-500">
+                        <img src="./assets/img/cat-06.jpg" class="d-block w-100  rounded-4 " alt="work-4">
+                    </div>
+                    <div class="carousel-box h-500">
+                        <img src="./assets/img/cat-07.jpg" class="d-block w-100  rounded-4 " alt="work-4">
+                    </div>
+                    <div class="carousel-box h-500">
+                        <img src="./assets/img/cat-08.jpg" class="d-block w-100  rounded-4 " alt="work-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *============= JS FILES ============= -->
+    <!-- BootStrap JS -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
