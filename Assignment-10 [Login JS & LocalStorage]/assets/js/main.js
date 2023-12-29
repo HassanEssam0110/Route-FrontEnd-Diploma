@@ -27,8 +27,7 @@ const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
 
 // handle home page & welcome text
-console.log(window.location.pathname);
-if (window.location.pathname === '/LoginSystem-JS/home.html') {
+if (window.location.pathname === '/Route-FrontEnd-Diploma/Assignment-10%20[Login%20JS%20&%20LocalStorage]/home.html') {
     currentUser.logged === false ? openWindow('index.html') : sayWelcome();
 }
 
