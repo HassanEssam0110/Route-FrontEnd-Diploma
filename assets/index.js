@@ -17,8 +17,8 @@ let assignmentsList = [
     { title: 'Assignment-10 [Login JS & LocalStorage]', demo: './Assignment-10 [Login JS & LocalStorage]/index.html', img: './Assignment-10 [Login JS & LocalStorage]/output.png' },
 ];
 let otherTopicsList = [
-    { title: '[Tempo-Template]', demo: './[Tempo-Template]/index.html', img: './[Tempo-Template]/output.png' },
     { title: 'Bootstrap-Exam [Daniels Template]', demo: './Bootstrap-Exam [Daniels Template]/index.html', img: './Bootstrap-Exam [Daniels Template]/output.png' },
+    { title: '[Tempo-Template]', demo: './[Tempo-Template]/index.html', img: './[Tempo-Template]/output.png' },
     { title: 'CSS Tricks [Create An Equal Height Bootstrap-5 Cols]', demo: './CSS Tricks [Create An Equal Height Bootstrap-5 Cols]/index.html', img: './CSS Tricks [Create An Equal Height Bootstrap-5 Cols]/output.png' },
     { title: 'CSS Tricks [Gradient tricks]', demo: './CSS Tricks [Gradient tricks]/index.html', img: './CSS Tricks [Gradient tricks]/output.png' },
 ];
