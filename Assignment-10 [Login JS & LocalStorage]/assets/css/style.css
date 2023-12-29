@@ -1,0 +1,276 @@
+:root {
+  --color-main: #17a2b8;
+  /* --color-sec: #17a2b8; */
+
+  --color-success: #5cb85c;
+  --color-danger: #e33049;
+  --color-warning: #ffc107;
+
+  --color-font-main: #fff;
+  --color-font-sec: #eff3f6;
+
+  --color-border: #888;
+  --color-border-form: #ffffff33;
+
+  --font-main: "Quicksand", sans-serif;
+  --font-head: "Righteous", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: var(--font-head);
+  color: var(--color-font-main);
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  color: var(--color-font-main);
+  font-family: var(--font-main);
+}
+
+body:has(#loginForm),
+body:has(#singupForm) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../img/bg-02.jpg");
+  background-size: 200% 200%;
+  animation: moveSky 60s linear infinite;
+}
+
+/* ?========== Start Form ==========*/
+#loginForm,
+#singupForm {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.icon-avater {
+  font-size: 6.25rem;
+  padding: 7px;
+  color: var(--color-font-main);
+  border-radius: 50%;
+  border: 1px solid var(--color-border-form);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../img/bg-02.jpg");
+  background-size: 250% 250%;
+  animation: moveSky 60s linear infinite;
+}
+form {
+  width: 75%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: -5px 2px 15px -9px rgba(0, 0, 0, 1);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--color-border-form);
+}
+form .input-cont .form-control {
+  color: var(--color-font-main);
+  background-color: transparent;
+}
+form .input-cont .form-control:focus {
+  background-color: transparent;
+  border-color: var(--color-main);
+  outline: 0;
+  box-shadow: none;
+}
+.input-cont:has(.form-control:focus) {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+  animation: wobble 0.3s ease-in;
+}
+form .form-control::placeholder {
+  color: var(--color-font-main);
+}
+.icon-password {
+  color: var(--color-font-main);
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 19px;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+form .btn-form {
+  --bs-btn-color: var(--color-main);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--color-main);
+  --bs-btn-hover-color: var(--color-font-main);
+  --bs-btn-hover-bg: var(--color-main);
+  --bs-btn-hover-border-color: var(--color-main);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--color-font-main);
+  --bs-btn-active-bg: #1490a3;
+  --bs-btn-active-border-color: #1490a3;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+form .btn-form:active {
+  transform: scale(0.98);
+}
+
+form .login-ask {
+  font-size: 14px;
+}
+form .login-ask a {
+  color: var(--color-main);
+  transition: color 0.3s;
+}
+form .login-ask a:hover {
+  color: var(--color-font-main);
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: var(--color-success);
+  background-image: none;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: var(--color-danger);
+  background-image: none;
+}
+
+.valid-feedback {
+  color: var(--color-success);
+}
+.invalid-feedback,
+.invalid-auth {
+  color: var(--color-danger);
+}
+
+/* ?========== Start Home ==========*/
+.bg-custom {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/bg-02.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  border-bottom: 0.5px solid var(--color-border);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 30px 30px;
+}
+.navbar-toggler {
+  border-color: transparent;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler i {
+  color: var(--color-font-main);
+  font-size: 1.875rem;
+}
+.logo a {
+  color: var(--color-font-main);
+}
+
+.user-avater {
+  width: 100px;
+  height: 100px;
+  color: var(--color-font-main);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.user-name span {
+  color: var(--color-warning);
+}
+/* *=============== Start Animation =============== */
+@keyframes moveSky {
+  0% {
+    background-position: 0% 50%;
+  }
+  10% {
+    background-position: 8% 25%;
+  }
+  20% {
+    background-position: 25% 15%;
+  }
+  30% {
+    background-position: 50% 8%;
+  }
+  40% {
+    background-position: 75% 25%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  60% {
+    background-position: 88% 50%;
+  }
+  70% {
+    background-position: 75% 32%;
+  }
+  80% {
+    background-position: 50% 8%;
+  }
+  90% {
+    background-position: 25% 15%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes wobble {
+  0% {
+    transform: scale(1.025);
+  }
+  25% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* *=============== Start Media =============== */
+@media screen and (max-width: 769px) {
+  form {
+    width: 100%;
+  }
+  .icon-avater {
+    font-size: 5.625rem;
+  }
+  .icon-password {
+    right: 5%;
+  }
+  .btn-logout {
+    margin-top: 20px;
+    width: 100%;
+  }
+}

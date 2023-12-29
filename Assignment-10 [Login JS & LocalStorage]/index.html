@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- *============= Meta ============= -->
+    <meta name="description" content="A login form for Smart Login System">
+    <meta name="keywords" content="login, JavaScript, Bootstrap 5, Assignment-10">
+    <meta name="author" content="Hassan Essam">
+    <!-- *============= Google Fonts ============= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- *============= CSS FILES ============= -->
+    <!-- Icomoon library -->
+    <link rel="stylesheet" href="./assets/css/icomoon.css">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Main style Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Login</title>
+</head>
+
+<body class="py-5 min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="container py-3">
+        <form id="loginForm" class="mx-auto py-5  px-3 px-md-5  position-relative ">
+            <i class="icon-user-circle-o icon-avater position-absolute top-0 start-50 translate-middle "></i>
+            <div class="mb-5 mt-3">
+                <h2 id="smartLoginSystem" class="text-center mb-0">Smart Login System</h2>
+            </div>
+            <div class="input-cont mb-3">
+                <input id="loginInputEmail" type="email" class="form-control" placeholder="Enter your email">
+                <!-- <div class="valid-feedback">Looks good!</div> -->
+                <div class="invalid-feedback">Please, enter valid email.</div>
+            </div>
+
+            <div class="input-cont mb-3">
+                <div class="position-relative">
+                    <input id="loginInputPassword" type="password" class="form-control input-password"
+                        placeholder="Enter your password">
+                    <i class="icon-eye-blocked icon-input icon-password"></i>
+                    <!-- <div class="valid-feedback">Looks good!</div> -->
+                    <div class="invalid-feedback">Password must be at least 8 characters long,<br />
+                        contain at least 1
+                        uppercase letter, and 1 number..
+                    </div>
+                </div>
+            </div>
+            <div id="invalidAuth" class="invalid-auth text-center d-none">incorrect email or password.</div>
+            <button id="btnLogin" type="button" class="btn  btn-form w-100 mt-3">Login</button>
+            <div class=" text-center mt-2 mb-3">
+                <p class="login-ask"> Don’t have an account? <a href="signup.html" class="">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- *============= JS FILES ============= -->
+    <!-- BootStrap JS -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
