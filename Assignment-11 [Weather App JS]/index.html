@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <!-- *============= Meta ============= -->
+    <meta name="description" content="...">
+    <meta name="keywords" content="webpage, JavaScript, Bootstrap 5, Assignment-11, Weather">
+    <meta name="author" content="Hassan Essam">
+    <!-- *============= Google Fonts ============= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- *============= CSS FILES ============= -->
+
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Fontawesome library -->
+    <!-- <link rel="stylesheet" href="./assets/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main style Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <!-- ?========= Start Navbar ========= -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="./assets/img/logo.png" alt="Weather logo" class="logo">
+                <div class="logo-info d-inline-block align-middle">
+                    <h1 class="site-title">Weather</h1>
+                    <span class="site-description">tagline goes here</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse mt-4 my-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item active"><a class="nav-link" href='/index.html'>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Live cameras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Photos</a></li>
+                    <li class="nav-item"><a class="nav-link" href='#'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ?========= Start hero ========= -->
+    <section class="hero ">
+        <div class=" container">
+            <form class="find-form position-relative">
+                <input id="findInput" class="form-control w-100" type="text" placeholder="Find your location...">
+                <!-- <input id="submit" class=" btn-find position-absolute" type="button" value="Find"> -->
+                <button id="btnFind" class=" btn-find position-absolute" type="button">Find</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ddd -->
+    <div class="forecast-table">
+        <div class="container">
+            <div id="forecast" class="row  rounded-3 forecast-container">
+                <!--^ today -->
+                <div class="col-lg-4">
+                    <div class=" forecast today rounded  rounded-3">
+                        <div id="today" class="forecast-header px-3  d-flex justify-content-between">
+                            <div class="day fw-semibold"></div>
+                            <div class="date text-light"></div>
+                        </div>
+                        <div id="current" class="forecast-content  px-3">
+                            <div class="location fs-4"></div>
+                            <div class="time me-auto"></div>
+                            <div class="degree d-flex justify-content-between">
+                                <div class="num"></div>
+                                <div class="forecast-icon align-self-end"> </div>
+                            </div>
+                            <p class="custom fs-5"></p>
+                            <div class=" mt-4 d-flex justify-content-between">  </div>
+                        </div>
+                    </div>
+                </div>
+                <!--^ tomorrow -->
+                <div id="tomorrow" class="col-lg-4 mt-3 mt-lg-0">
+                    <div class="text-center h-100 rounded-2 forecast tomorrow">
+                        <div class="forecast-header fw-semibold px-3">
+                            <div class="day"></div>
+                        </div>
+                        <div class="forecast-content px-3">
+                            <div class="forecast-icon">
+                            </div>
+                            <div class="degree fs-2"></div>
+                            <p class="fs-5 mb-0"></p>
+                            <p class="custom fs-5"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--^ afterTomorrow -->
+                <div id="afterTomorrow" class="col-lg-4 mt-3 mt-lg-0">
+                    <div class="text-center h-100 rounded-2 forecast">
+                        <div class="forecast-header fw-semibold px-3">
+                            <div class="day"></div>
+                        </div>
+                        <div class="forecast-content px-3">
+                            <div class="forecast-icon"></div>
+                            <div class="degree fs-2"></div>
+                            <p class="fs-5 mb-0"></p>
+                            <p class="custom fs-5"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ?========= Start About ========= -->
+    <section class=" pt-5 py-lg-5 w-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <p class="text-center text-lg-start fs-5 ">Exploring the vibrant world of weather, our platform.
+                        <br>
+                        <span class="px-1 fw-bold ">Weather</span> is a comprehensive destination for the
+                        latest updates and forecasts.<br>
+                        Whether seeking current news, live camera feeds, captivating photos, or direct contact for
+                        queries, Weather offers an immersive experience.<br>
+                        The site's intuitive interface allows users to effortlessly find their locations and
+                        access detailed forecasts.<br> Our commitment to providing timely, accurate weather information
+                        is
+                        matched by our dedication to user experience. <br>
+                        <span class="fs-6 fw-semibold text-light">- Join us in navigating the atmospheric world andstay
+                            informed with Weather!</span>
+                </div>
+                <div class="col-lg-5 mb-0">
+                    <svg class="weather-svg mx-auto d-block" xmlns="http://www.w3.org/2000/svg" height="270"
+                        fill="none">
+                        <circle class="sun" cx="188" cy="123" r="106" fill="#FFD43B" />
+                        <path class="moon" opacity=".3"
+                            d="M165 206c58.542 0 106-47.458 106-106 0-23.403-7.585-45.035-20.429-62.571C276.901 56.715 294 87.861 294 123c0 58.542-47.458 106-106 106-35.139 0-66.285-17.098-85.571-43.429C119.965 198.416 141.597 206 165 206z"
+                            fill="#FAB005" />
+                        <path class="rocket-bottom"
+                            d="M175.828 113.828a3.997 3.997 0 0 0 0-5.656 3.997 3.997 0 0 0-5.656 0l-35 35a3.997 3.997 0 0 0 0 5.656 3.997 3.997 0 0 0 5.656 0l35-35zM192.328 113.172a3.997 3.997 0 0 1 0 5.656l-107.5 107.5a3.998 3.998 0 0 1-5.656 0 3.999 3.999 0 0 1 0-5.656l107.5-107.5a3.997 3.997 0 0 1 5.656 0zM182.828 146.172a3.997 3.997 0 0 1 0 5.656l-35 35a3.997 3.997 0 0 1-5.656 0 3.997 3.997 0 0 1 0-5.656l35-35a3.997 3.997 0 0 1 5.656 0z"
+                            fill="#fff" />
+                        <path class="rocket"
+                            d="M207.662 104.891l-8.766-8.594c-1.547-1.719-2.063-3.953-1.031-6.016 3.093-7.219 10.656-24.234 16.843-33.172 14.094-20.797 35.063-21.484 47.438-19.078 2.062.344 3.609 1.89 3.953 3.953 2.406 12.375 1.719 33.344-19.078 47.438-9.109 6.187-26.125 13.578-33.516 16.672-1.89.859-4.297.343-5.843-1.203z"
+                            fill="#193154" />
+                        <path class="rocket"
+                            d="M205.573 102.843l2.089 2.048c1.546 1.546 3.953 2.062 5.843 1.203 7.391-3.094 24.407-10.485 33.516-16.672 20.797-14.094 21.484-35.063 19.078-47.438-.344-2.062-1.891-3.61-3.953-3.953-4.79-.931-10.866-1.399-17.334-.417.691.106 1.36.224 2.006.349 2.062.344 3.609 1.89 3.953 3.953 2.406 12.375 1.719 33.344-19.078 47.438-6.745 4.58-17.823 9.821-26.12 13.489z"
+                            fill="#001D40" />
+
+                        <circle class="rocket" cx="245" cy="59" r="7" fill="#fff" />
+
+                        <path class="rocket"
+                            d="M213.161 59.344c-4.812 7.906-10.484 19.765-13.75 27.156h-16.328c-1.375 0-2.75-.688-3.437-2.063-.86-1.203-.86-2.921 0-4.124l9.109-14.954c2.234-3.609 6.187-6.015 10.484-6.015h13.922zm4.297 45.031c7.563-3.266 19.422-8.594 27.156-13.406v13.922a12.33 12.33 0 0 1-5.844 10.484l-14.953 9.109c-1.203.688-2.922.86-4.125 0a4.007 4.007 0 0 1-2.234-3.609v-16.5z"
+                            fill="#8991A6" />
+
+                        <g opacity=".5" fill="#515F7C">
+                            <path class="rocket"
+                                d="M199.411 86.5c3.266-7.39 8.938-19.25 13.75-27.156h-13.922c-.711 0-1.414.066-2.101.192-4.774 7.851-10.387 19.575-13.659 26.964h15.932zM228.614 99.37v5.677c0 4.297-2.235 8.25-5.844 10.484l-5.312 3.236v2.108c0 1.547.86 2.922 2.235 3.609 1.203.86 2.921.688 4.125 0l14.953-9.109a12.331 12.331 0 0 0 5.843-10.484V90.969c-4.492 2.795-10.375 5.764-16 8.402z" />
+                        </g>
+
+                        <path class="cloud"
+                            d="M324.739 167.758V166c0-17.188 13.867-31.25 31.25-31.25 11.524 0 21.68 6.445 26.953 15.82 2.93-2.148 6.641-3.32 10.547-3.32 10.352 0 18.75 8.398 18.75 18.75 0 2.539-.586 4.688-1.367 6.836 11.524 2.344 20.117 12.5 20.117 24.414 0 13.867-11.328 25-25 25h-71.875a28.008 28.008 0 0 1-28.125-28.125c0-12.109 7.813-22.656 18.75-26.367zM30.74 62.758V61c0-17.188 13.866-31.25 31.25-31.25 11.523 0 21.679 6.445 26.952 15.82 2.93-2.148 6.641-3.32 10.547-3.32 10.352 0 18.75 8.398 18.75 18.75 0 2.54-.586 4.688-1.367 6.836 11.524 2.344 20.117 12.5 20.117 24.414 0 13.867-11.328 25-25 25H40.114A28.008 28.008 0 0 1 11.99 89.125c0-12.11 7.813-22.656 18.75-26.367z"
+                            fill="#F0F1F3" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ?========= Start Footer ========= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row flex-column flex-md-row align-items-center mb-3">
+                <div class="col-lg-8 ">
+                    <form class="subscribe-form position-relative">
+                        <input id="subscribeInput" class="form-control w-100" type="text"
+                            placeholder="Enter your email to subscribe...">
+                        <button id="btnSubscribe" class=" btn-find position-absolute" type="button">Subscribe</button>
+                    </form>
+                </div>
+                <div class="col-lg-3  d-flex justify-content-center ms-lg-auto mt-4 mt-lg-0 pt-2 pt-lg-0">
+                    <div class="social-links">
+                        <a href="#" class=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class=""><i class="fa-brands fa-google-plus"></i></a>
+                        <a href="#" class=""><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="fs-5 text-center">Copyright 2014 Company name. Designed by Themezy. All rights
+                reserved</p>
+        </div>
+    </footer> <!-- .site-footer -->
+    <!-- *============= JS FILES ============= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+        integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="./assets/js/all.min.js"></script> -->
+    <!-- BootStrap JS -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

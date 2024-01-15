@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/icomoon.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>QR Code Reader</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <input type="file" hidden>
+            <img src="" alt="qr-code-img">
+            <div class="content">
+                <i class="icon-cloud-upload"></i>
+                <p>Upload QR code to scan</p>
+            </div>
+        </form>
+        <div class="details">
+            <textarea disabled></textarea>
+            <div class="buttons">
+                <button class="close">Close</button>
+                <button class="copy">Copy Text</button>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

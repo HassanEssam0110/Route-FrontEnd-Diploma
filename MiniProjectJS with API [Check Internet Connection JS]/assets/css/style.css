@@ -1,0 +1,88 @@
+:root {
+  --bg-color: #e3f2fd;
+
+  --color-light: #fff;
+
+  --primary-color: #5372f0;
+  --danger-color: #ea4d67;
+  --success-color: #2ecc71;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: var(--bg-color);
+}
+.popup {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  visibility: hidden;
+  display: flex;
+  background: var(--color-light);
+  width: 490px;
+  border-radius: 5px;
+  padding: 13px 17px 20px;
+  box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
+  border-top: 3px solid var(--danger-color);
+  transform: translateX(-50%);
+  transition: all 0.25s ease;
+}
+.popup.show {
+  top: 0;
+  visibility: visible;
+}
+.popup.online {
+  border-color: var(--success-color);
+}
+.popup .popup-icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--color-light);
+  background-color: var(--danger-color);
+  font-size: 1.3rem;
+}
+.popup.online .popup-icon i {
+  background-color: var(--success-color);
+}
+.popup .popup-title {
+  font-size: 1.2rem;
+}
+.popup .popup-desc {
+  font-size: 1.04rem;
+  color: #474747;
+  margin: 3px 0 10px;
+}
+.popup-desc span {
+  font-weight: bold;
+}
+.popup .reconnect {
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--color-light);
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 9px 15px;
+  cursor: pointer;
+}
+.popup.online .reconnect {
+  background-color: #bfbfbf;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 550px) {
+  .popup {
+    width: 100%;
+    padding: 10px 15px 17px;
+  }
+}

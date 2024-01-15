@@ -1,0 +1,82 @@
+:root {
+  /* --bg-color: #e3f2fd; */
+  --bg-color: #3498db;
+
+  --color-light: #fff;
+
+  --primary-color: #5372f0;
+  --danger-color: #ea4d67;
+  --success-color: #2ecc71;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #3498db;
+}
+.wrapper {
+  background: #fff;
+  height: 260px;
+  max-width: 410px;
+  border-radius: 7px;
+  padding: 16px 25px;
+  transition: height 0.2s ease;
+}
+
+.wrapper.active {
+  height: 530px;
+}
+header h1 {
+  font-size: 21px;
+  font-weight: 500;
+}
+header p {
+  font-size: 16px;
+  color: #474747;
+  margin-top: 5px;
+}
+.wrapper .form {
+  margin: 20px 0 25px;
+}
+.form :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.form input {
+  font-size: 18px;
+  padding-inline: 17px;
+  border: 1px solid #999;
+}
+.form button {
+  background: #3498db;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.wrapper .qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 33px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+}
+.wrapper.active .qr-code {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}

@@ -1,0 +1,36 @@
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    background: #262936;
+    border-radius: 10px;
+  }
+  .nav-item {
+    padding: 20px;
+  }
+  .nav-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .nav-item a.nav-link {
+    padding: 0;
+  }
+  .nav-item.active a.nav-link,
+  .nav-item a.nav-link:hover {
+    color: #009ad8;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse {
+    background: transparent;
+  }
+  .navbar-nav .nav-item {
+    margin-left: 10px;
+  }
+  .nav-item a.nav-link {
+    padding: 5px 25px;
+  }
+  .nav-item.active a.nav-link,
+  .nav-item a.nav-link:hover {
+    border-color: #009ad8;
+    color: #009ad8;
+  }
+}

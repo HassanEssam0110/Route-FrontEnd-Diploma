@@ -16,6 +16,8 @@
         content="This is the Route FrontEnd Diploma webpage showcasing assignments, mini projects, and other topics.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hassanessam0110.github.io/Route-FrontEnd-Diploma/">
+    <!-- *====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Alata|Roboto&display=swap" rel="stylesheet" />
     <!-- *====== Bootstrap CSS ====== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -28,36 +30,82 @@
     <title>Route FrontEnd Diploma</title>
 </head>
 
-<body class="bg-100 py-5">
-    <div class="container">
-        <div class="main-head">
-            <h1 class="fs-3">Route-FrontEnd-Diploma</h1>
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent">
+    <!-- ^======  NavBar ====== -->
+    <nav class="navbar navbar-expand-md py-3 position-fixed w-100 top-0 z-3">
+        <div class="container d-flex align-items-center">
+            <a class="navbar-brand" href="#">H.Essam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-ellipsis-vertical navbar-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-center active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#assignments">Assignments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-
+    </nav>
+    <!-- ^======  Hero Section ====== -->
+    <header id="home" class="hero pt-5  d-flex justify-content-center align-items-center ">
+        <div class="container h-100  d-flex flex-column justify-content-center align-items-center">
+            <div class="main-head">
+                <h1 class="text-center mb-4">FrontEnd Diploma Route Academy</h1>
+            </div>
+            <p class="text-center">Explore my Frontend journey at Route Academy through a showcase of assignments and
+                projects. See hands-on work in HTML, CSS, and JavaScript, reflecting technical skills and
+                problem-solving abilities. Each project is a testament to practical application and gained knowledge.
+                Join me on this visual journey defining my learning experience!</p>
+        </div>
+    </header>
     <!-- ^====== Route Assignments ====== -->
-    <div class="container py-5 ">
+    <section id="assignments" class="container py-5 ">
         <div class="secondary-head ">
             <h2 class="fs-5">Route Assignments</h2>
         </div>
-        <div id="assContainer" class="row my-4 gx-4 gy-4 "></div>
-    </div>
-    <!-- ^====== Mini Project JS ====== -->
-    <div class="w-100 py-5 bg-200">
+        <div id="assContainer" class="row my-4 gx-4 gy-4 ">
+        </div>
+    </section>
+    <div class="parallax parallax-1"></div>
+    <!-- ^====== Mini Project JS With API ====== -->
+    <section id="Projects" class="py-5">
         <div class="container">
-            <div class="secondary-head mb-3">
-                <h2 class="fs-4">Mini Project JS</h2>
+            <div class="secondary-head">
+                <h2 class="fs-5">Mini Project JS With API</h2>
             </div>
-            <div id="miniProjectsContainer" class="row my-4 gx-4 gy-4 "></div>
+            <div id="miniProjectsAPIContainer" class="row my-4 gx-4 gy-4 "></div>
         </div>
-    </div>
+    </section>
+    <!-- ^====== Mini Project JS ====== -->
+    <section class=" py-5">
+        <div class="container">
+            <div class="secondary-head">
+                <h2 class="fs-5">Mini Project JS</h2>
+            </div>
+            <div id="miniProjectsContainer" class="row my-4 gx-4 gy-4"></div>
+        </div>
+    </section>
     <!-- ^====== Other Topics ====== -->
-    <div class="container py-5">
-        <div class="secondary-head mb-3">
-            <h2 class="fs-4">Other Topics</h2>
+    <section class="py-5">
+        <div class="container">
+            <div class="secondary-head">
+                <h2 class="fs-5">Other Topics</h2>
+            </div>
+            <div id="topicsContainer" class="row my-4 gx-4 gy-4"></div>
         </div>
-        <div id="topicsContainer" class="row my-4 gx-4 gy-4 "></div>
-    </div>
+    </section>
 
     <!-- *====== Font-awesome JS ====== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
