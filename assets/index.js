@@ -30,13 +30,13 @@ let miniProjectList = [
     { title: 'MiniProjectJS [SliderJS]', demo: './MiniProjectJS [SliderJS]/index.html', img: './MiniProjectJS [SliderJS]/output.png' },
 ];
 let miniProjectAPIList = [
-    { title: '01- Check Internet Connection JS', demo: '../MiniProjectJS with API [Check Internet Connection JS]/index.html', img: '../MiniProjectJS with API [Check Internet Connection JS]/output.png' },
-    { title: '02- QR Code Generator JS', demo: '../MiniProjectJS with API [QR Code Generator JS]/index.html', img: '../MiniProjectJS with API [QR Code Generator JS]/output.png' },
-    { title: '03- QR Code Reader JS', demo: '../MiniProjectJS with API [QR Code Reader JS]/index.html', img: '../MiniProjectJS with API [QR Code Reader JS]/output.png' },
+    { title: '01- Check Internet Connection JS', demo: './MiniProjectJS with API [Check Internet Connection JS]/index.html', img: './MiniProjectJS with API [Check Internet Connection JS]/output.png' },
+    { title: '02- QR Code Generator JS', demo: './MiniProjectJS with API [QR Code Generator JS]/index.html', img: './MiniProjectJS with API [QR Code Generator JS]/output.png' },
+    { title: '03- QR Code Reader JS', demo: './MiniProjectJS with API [QR Code Reader JS]/index.html', img: './MiniProjectJS with API [QR Code Reader JS]/output.png' },
 ]
 
 // ^=============== JS FUNCTIONS ===============
-function display(conteniarEl,list) {
+function display(conteniarEl, list) {
     let contant = '';
     list.forEach(element => {
         contant += `
