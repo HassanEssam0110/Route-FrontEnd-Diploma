@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Yummy is your ultimate destination for discovering delicious recipes, cooking tips, and culinary inspiration. Explore a wide range of mouthwatering dishes, from appetizers to desserts, and embark on a culinary adventure with us. Let's make every meal a delightful experience!">
+    <meta name="keywords" content="Yummy, Meals, jquery, JavaScript">
+    <meta name="author" content="Hassan Essam">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Yummy">
+    <meta property="og:description"
+        content="Yummy is your ultimate destination for discovering delicious recipes, cooking tips, and culinary inspiration. Explore a wide range of mouthwatering dishes, from appetizers to desserts, and embark on a culinary adventure with us. Let's make every meal a delightful experience!">
+    <meta property=" og:image" content="./assets/img/logo.png">
+    <meta property="og:url" content="https://hassanessam0110.github.io/Yummy/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+    <meta name="twitter:card" content="./assets/img/logo.png">
+    <meta name="twitter:title" content="Yummy">
+    <meta name="twitter:description"
+        content="Yummy is your ultimate destination for discovering delicious recipes, cooking tips, and culinary inspiration. Explore a wide range of mouthwatering dishes, from appetizers to desserts, and embark on a culinary adventure with us. Let's make every meal a delightful experience!">
+    <meta name="twitter:image" content="./assets/img/logo.png">
+
+    <!-- ?===> CSS Fils <=== -->
+    <!-- icomoon icons -->
+    <link rel="stylesheet" href="./assets/css/icomoon.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Yummy</title>
+</head>
+
+<body>
+    <!-- ^===> Start loading-screen <=== -->
+    <div class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+        <span class="loader"></span>
+    </div>
+
+    <!-- ^===> Start Side Nav Menu <=== -->
+    <div class="side-menu min-vh-100 position-fixed top-0 d-flex">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <ul class="nav flex-column">
+                <li class="nav-item position-relative">
+                    <a class="nav-link active" href="#search">Search</a>
+                </li>
+                <li class="nav-item position-relative">
+                    <a class="nav-link" href="#categories">Categories</a>
+                </li>
+                <li class="nav-item position-relative">
+                    <a class="nav-link" href="#area">Area</a>
+                </li>
+                <li class="nav-item position-relative">
+                    <a class="nav-link" href="#ingredients">Ingredients</a>
+                </li>
+                <li class="nav-item position-relative">
+                    <a class="nav-link" href="#contactUs">Contact Us</a>
+                </li>
+            </ul>
+            <div class="nav-footer">
+                <div class="icons">
+                    <a href="#" class="me-1"><i class="icon-facebook"></i></a>
+                    <a href="#" class="me-1"><i class="icon-twitter"></i></a>
+                    <a href="#" class="me-1"><i class="icon-globe"></i></a>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header  d-flex flex-column justify-content-between py-4 text-center px-2">
+            <img class="logo d-block" src="./assets/img/logo.png" alt="Yummy logo">
+            <i id="menuToggle" class="icon-align-justify icon-menu"></i>
+            <div>
+                <a href="#" class="d-block"> <i class="icon-globe"></i></a>
+                <a href="#" class="d-block"> <i class="icon-share-alt"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ^===> Start section meals data <=== -->
+    <section id="meals" class="min-vh-100 ms-auto position-relative">
+        <div
+            class="inner-loading-screen position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+        <div class="container d-flow-root">
+            <div id="dataMeals" class="row py-5 g-4"></div>
+        </div>
+    </section>
+
+    <!-- ^===> Start section meals details data <=== -->
+    <section id="mealsDetails" class="min-vh-100 ms-auto position-relative">
+        <div
+            class="inner-loading-screen position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+        <div class="container d-flow-root">
+            <div id="dataMealsDetails" class="row py-5 g-4"></div>
+        </div>
+    </section>
+
+    <!-- ^===> Start section Search <=== -->
+    <section id="search" class="ms-auto">
+        <div class="container d-flow-root">
+            <div class="row py-4 g-4">
+                <div class="col-md-6 ">
+                    <input id="searchByNameInput" class="search-input form-control bg-transparent text-white"
+                        type="text" placeholder="Search By Name">
+                </div>
+                <div class="col-md-6">
+                    <input id="searchByFLetterInput" class="search-input form-control bg-transparent text-white"
+                        type="text" placeholder="Search By First Letter" maxlength="1">
+                </div>
+            </div>
+        </div>
+        <div class="container d-flow-root position-relative min-vh-100">
+            <div
+                class="inner-loading-screen position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+                <span class="loader"></span>
+            </div>
+            <div id="dataSearch" class="row py-5 g-4"></div>
+        </div>
+    </section>
+
+    <!-- ^===> Start section Categories <=== -->
+    <section id="categories" class="min-vh-100 ms-auto position-relative">
+        <div
+            class="inner-loading-screen position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+        <div class="container d-flow-root ">
+            <div id="dataCategories" class="row py-5 g-4"></div>
+        </div>
+    </section>
+
+    <!-- ^===> Start section Areas <=== -->
+    <section id="area" class="min-vh-100  ms-auto position-relative">
+        <div
+            class="inner-loading-screen position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+        <div class="container d-flow-root">
+            <div id="dataArea" class="row py-5 g-4"></div>
+        </div>
+    </section>
+
+    <!-- ^===> Start section Ingredients <=== -->
+    <section id="ingredients" class="min-vh-100  ms-auto position-relative">
+        <div
+            class="inner-loading-screen position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+        <div class="container d-flow-root">
+            <div id="dataIngredients" class="row py-5 g-4"></div>
+        </div>
+    </section>
+
+    <!-- ^===> Start section Contact-Us <=== -->
+    <section id="contactUs" class="py-5 ms-auto">
+        <div class="container min-vh-100 d-flex justify-content-center align-items-center ">
+            <form id="contactForm" class="row g-3 g-md-4 needs-validation px-md-5 mx-md-5" novalidate>
+                <div class="col-md-6">
+                    <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                    <div id="nameAlert" class="alert alert-danger w-100 my-2 d-none"></div>
+                </div>
+                <div class="col-md-6">
+                    <input id="emailInput" type="email" class="form-control" placeholder="Enter Your Email">
+                    <div id="emailAlert" class="alert alert-danger w-100 my-2 d-none"></div>
+                </div>
+                <div class="col-md-6">
+                    <input id="phoneInput" type="tel" class="form-control" placeholder="Enter Your Phone">
+                    <div id="phoneAlert" class="alert alert-danger w-100 my-2 d-none"></div>
+                </div>
+                <div class="col-md-6">
+                    <input id="ageInput" type="number" class="form-control" placeholder="Enter Your Age">
+                    <div id="ageAlert" class="alert alert-danger w-100 my-2 d-none"></div>
+                </div>
+                <div class="col-md-6">
+                    <input id="passwordInput" type="password" class="form-control" placeholder="Enter Your Password">
+                    <div id="passwordAlert" class="alert alert-danger w-100 my-2 d-none"></div>
+                </div>
+                <div class="col-md-6">
+                    <input id="repasswordInput" type="password" class="form-control" placeholder="Repassword">
+                    <div id="repasswordAlert" class="alert alert-danger w-100 my-2 d-none"></div>
+                </div>
+                <div class="col-12">
+                    <button id="submitBtn" class="btn btn-outline-danger d-block px-2 mx-auto mt-3"
+                        disabled>Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ?===> JS Fils <=== -->
+    <!-- jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>
