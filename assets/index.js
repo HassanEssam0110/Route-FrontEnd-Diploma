@@ -20,6 +20,7 @@ let assignmentsList = [
     { title: 'Assignment-09 [Bookmarker JS & LocalStorage]', demo: './Assignment-09 [Bookmarker JS & LocalStorage]/index.html', img: './Assignment-09 [Bookmarker JS & LocalStorage]/output.png', codeURL },
     { title: 'Assignment-10 [Login JS & LocalStorage]', demo: './Assignment-10 [Login JS & LocalStorage]/index.html', img: './Assignment-10 [Login JS & LocalStorage]/output.png', codeURL },
     { title: 'Assignment-11 [Weather App JS]', demo: './Assignment-11 [Weather App JS]/index.html', img: './Assignment-11 [Weather App JS]/output.png', codeURL },
+    { title: 'Assignment-12 [Party Event jQuery]', demo: './Assignment-12 [Party Event jQuery]/index.html', img: './Assignment-12 [Party Event jQuery]/output.png', codeURL },
 ];
 let otherTopicsList = [
     { title: 'Bootstrap-Exam [Daniels Template]', demo: './Bootstrap-Exam [Daniels Template]/index.html', img: './Bootstrap-Exam [Daniels Template]/output.png', codeURL },
